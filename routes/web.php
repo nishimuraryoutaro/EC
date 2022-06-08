@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComponentTestControllet;
+use App\Http\Controllers\LifeCycleTestControllet;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,8 +23,8 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 
-Route::get('component-test1', [ComponentTestControllet::class, 'showComponent1']);
-Route::get('component-test2', [ComponentTestControllet::class, 'showComponent2']);
-                
+Route::get('/component-test1', [ComponentTestControllet::class, 'showComponent1']);
+Route::get('/component-test2', [ComponentTestControllet::class, 'showComponent2']);
+Route::get('/servicecontainertest', [LifeCycleTestControllet::class, 'showServiceContainertest']);
 
 require __DIR__.'/auth.php';
