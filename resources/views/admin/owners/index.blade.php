@@ -12,13 +12,13 @@
                     エロクアント
                     @foreach ($e_all as $e_owner)
                         {{ $e_owner->name}}
-                        {{ $e_owner->created_at }}
+                        {{ $e_owner->created_at->diffForHumans() }}
                     @endforeach
                     <br>
                     クエリビルダ
-                    @foreach ($q_all as $q_owner)
+                    @foreach ($q_get as $q_owner)
                         {{ $q_owner->name }}
-                        {{ $q_owner->created_at }}
+                        {{ Carbon\Carbon::parse($q_owner->created_at)->diffForHumans() }}
                     @endforeach
                 </div>
             </div>

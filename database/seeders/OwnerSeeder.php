@@ -14,7 +14,7 @@ class OwnerSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run() 
     {
         DB::table('owners')->insert([
             [

@@ -32,7 +32,7 @@ Route::resource('owners',OwnersController::class)
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
-})->middleware(['auth'])->name('dashboard');
+})->middleware(['auth:admin'])->name('dashboard');
 
 
 

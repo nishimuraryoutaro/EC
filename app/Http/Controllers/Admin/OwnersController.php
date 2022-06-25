@@ -28,10 +28,10 @@ class OwnersController extends Controller
         echo $date_parse;
 
         $e_all = Owner::all();
-        $q_all = DB::table('owners')->select('name', 'created_at')->get();
+        $q_get = DB::table('owners')->select('name', 'created_at')->get();
 
 
-        return view('admin.owners.index', compact('e_all', 'q_all'));
+        return view('admin.owners.index', compact('e_all', 'q_get'));
     }
 
     /**
